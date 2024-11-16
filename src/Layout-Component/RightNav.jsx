@@ -1,10 +1,12 @@
 import React from 'react';
 import SocialLogin from '../Components/SocialLogin';
+import FindUs from '../Components/FindUs';
 
 const RightNav = () => {
     return (
-        <div>
+        <div className="space-y-5">
         <SocialLogin></SocialLogin>
+        <FindUs></FindUs>
         </div>
     );
 };
