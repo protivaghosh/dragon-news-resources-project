@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEye } from "react-icons/fa";
 import { BsStarFill, BsShareFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const NewsCard = (props={}) => {
   const {news} =props || {};
@@ -32,7 +33,7 @@ const NewsCard = (props={}) => {
         </div>
         <h2 className="card-title text-lg font-bold">{news.title}</h2>
         <p className="text-sm text-gray-600 mt-2">{news.details}</p>
-        <button className="btn btn-link text-primary p-0 mt-2">Read More</button>
+        <Link to={`/news/${news._id}`} className="btn btn-link text-primary p-0 mt-2">Read More</Link>
         <div className="card-actions justify-between mt-4">
           <div className="flex items-center text-yellow-500">
             {[...Array(5)].map((_, i) => (
